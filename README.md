@@ -36,7 +36,7 @@ that helps users manage expenses, track spending, set budgets, and visualize fin
 ---
 
 ## 📂 Project Structure
-
+```text
 expense_tracker/
 │── app.py
 │── requirements.txt
