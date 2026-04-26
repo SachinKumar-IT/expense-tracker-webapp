@@ -1,2 +1,6 @@
 .vscode/
 instance/
+pyrightconfig.json
+__pycache__/
+*.db
+static/expenses.csv
