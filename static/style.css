@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --accent-color: #ec4899;
+    --bg-gradient-start: #f8fafc;
+    --bg-gradient-end: #e2e8f0;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --text-main: #1e293b;
+    --border-color: rgba(255, 255, 255, 0.5);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-bs-theme="dark"] {
+    --primary-color: #818cf8;
+    --primary-hover: #6366f1;
+    --accent-color: #f472b6;
+    --bg-gradient-start: #0f172a;
+    --bg-gradient-end: #1e293b;
+    --card-bg: rgba(30, 41, 59, 0.75);
+    --text-main: #f8fafc;
+    --border-color: rgba(255, 255, 255, 0.05);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%) fixed;
+    color: var(--text-main);
+    min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 8px 32px 0 var(--shadow-color) !important;
+}
+
+.glass-navbar {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.glass-navbar .navbar-brand, 
+.glass-navbar .nav-link {
+    color: var(--text-main) !important;
+    transition: color 0.2s ease;
+}
+
+.glass-navbar .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.glass-navbar .navbar-toggler-icon {
+    filter: invert(0);
+}
+[data-bs-theme="dark"] .glass-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Typography & Colors */
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-primary-subtle {
+    background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: white;
+}
+
+/* Utilities */
+.shadow-glow {
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+}
+
+.shadow-glow:hover {
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+    transform: translateY(-2px);
+}
+
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-bg-primary:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.hover-bg-danger:hover {
+    background-color: #ef4444 !important;
+    color: white !important;
+}
+
+.transition-all {
+    transition: all 0.2s ease-in-out;
+}
+
+.op-10 { opacity: 0.1; }
+.op-25 { opacity: 0.25; }
+.op-50 { opacity: 0.5; }
+.op-75 { opacity: 0.75; }
+
+/* Custom Inputs */
+.form-control, .form-select {
+    color: var(--text-main);
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+    border-color: var(--primary-color);
+}
+
+[data-bs-theme="dark"] .form-control.bg-light,
+[data-bs-theme="dark"] .form-select.bg-light,
+[data-bs-theme="dark"] .input-group-text.bg-light {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: white;
+}
+
+[data-bs-theme="dark"] option {
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Summary Cards */
+.summary-card {
+    transition: transform 0.3s ease;
+}
+.summary-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes pulseDanger {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.pulse-danger {
+    animation: pulseDanger 2s infinite;
+}

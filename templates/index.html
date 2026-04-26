@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <!-- Hero Section -->
+    <div class="col-lg-10 text-center mb-5">
+        <div class="py-5">
+            <h1 class="display-3 fw-bold mb-3 text-gradient">Track Your Spending Smartly</h1>
+            <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px;">
+                Manage your finances effortlessly with our modern Expense Tracker. Set budgets, track daily spending, and gain visual insights into your financial health.
+            </p>
+            <div class="d-flex justify-content-center">
+                <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg rounded-pill px-5 shadow-glow fw-bold">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="col-12 mt-5">
+        <h2 class="text-center fw-bold mb-5">Why Choose Expense Tracker?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm glass-card rounded-4 p-4 hover-scale transition-all">
+                    <div class="card-body text-center">
+                        <div class="bg-primary-subtle rounded-circle d-inline-flex p-3 mb-4 text-primary shadow-sm">
+                            <i class="fa-solid fa-wallet fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Track Expenses</h4>
+                        <p class="text-muted">Easily record your daily expenses with categories and dates in just a few clicks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm glass-card rounded-4 p-4 hover-scale transition-all">
+                    <div class="card-body text-center">
+                        <div class="bg-info-subtle rounded-circle d-inline-flex p-3 mb-4 text-info shadow-sm">
+                            <i class="fa-solid fa-bullseye fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Budget Control</h4>
+                        <p class="text-muted">Set monthly budget limits and get instant visual warnings when you're close to exceeding them.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm glass-card rounded-4 p-4 hover-scale transition-all">
+                    <div class="card-body text-center">
+                        <div class="bg-accent-subtle rounded-circle d-inline-flex p-3 mb-4 text-accent shadow-sm">
+                            <i class="fa-solid fa-chart-pie fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Visual Insights</h4>
+                        <p class="text-muted">Understand your spending patterns with beautiful, interactive category-wise doughnut charts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="col-lg-10 mt-5 pt-5 text-center">
+        <div class="glass-card rounded-4 p-5 shadow-sm">
+            <h3 class="fw-bold mb-4">About The Web Application</h3>
+            <p class="text-muted mb-0 lead">
+                Expense Tracker was built with simplicity and elegance in mind. We believe that managing money shouldn't be a chore. Our mission is to provide you with a clean, efficient tool to stay on top of your finances, whether you're saving for a goal or just keeping track of your daily coffee runs.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="col-12 mt-5 pt-5 pb-4">
+        <hr class="op-10 mb-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
+            <p class="mb-2 mb-md-0">© 2024 Expense Tracker. All rights reserved.</p>
+            <div class="d-flex gap-4">
+                <a href="#" class="text-muted text-decoration-none hover-text-primary">Privacy Policy</a>
+                <a href="#" class="text-muted text-decoration-none hover-text-primary">Terms of Service</a>
+                <a href="#" class="text-muted text-decoration-none hover-text-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
